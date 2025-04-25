@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Janagama Rohith - Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('background.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+    h1 {
+      font-size: 4em;
+      font-weight: bold;
+      color: aqua;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 2.5em;
+      color: #00ffff;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.3em;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+    .button {
+      display: inline-block;
+      margin: 20px 10px;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      color: white;
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      border: none;
+      border-radius: 50px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .button:hover {
+      background: linear-gradient(135deg, #ff6ec4, #7873f5);
+      transform: scale(1.1);
+    }
+    .hidden {
+      display: none;
+      margin-top: 30px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px auto;
+      max-width: 800px;
+    }
+    li {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 15px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      text-align: left;
+      font-size: 1.1em;
+    }
+    strong {
+      color: #66ffcc;
+    }
+  </style>
+  <script>
+    function toggleProjects() {
+      var projects = document.getElementById('projects');
+      projects.style.display = projects.style.display === 'block' ? 'none' : 'block';
+    }
+    function toggleContact() {
+      var contact = document.getElementById('contact');
+      contact.style.display = contact.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</head>
+<body>
+
+  <h1>Janagama Rohith</h1>
+
+  <h2>Data Scientist</h2>
+
+  <div id="about">
+    <h2>About Me</h2>
+    <p>I am an experienced Data Scientist with over 4 years of expertise in building machine learning models, AI solutions, and real-time predictive systems. I specialize in deploying scalable data pipelines, developing GenAI-powered applications, and delivering business insights through advanced analytics. Skilled in Python, AWS, GCP, and Azure, I focus on creating solutions that improve efficiency, customer experience, and decision-making. My passion lies in solving complex problems through in...
+  </div>
+
+  <button class="button" onclick="toggleProjects()">Click Here to See My Projects</button>
+  <div id="projects" class="hidden">
+    <h2>Projects</h2>
+    <ul>
+      <li>
+        <strong>Personalized LLM Using RAG</strong><br>
+        Built a Retrieval-Augmented Generation (RAG) based LLM system to deliver personalized responses using custom datasets.
+      </li>
+      <li>
+        <strong>GenAI Healthcare Chatbot</strong><br>
+        Developed a healthcare chatbot using GenAI to assist users with clinical and healthcare queries powered by Vertex AI and AWS Lambda.
+      </li>
+    </ul>
+  </div>
+
+  <button class="button" onclick="toggleContact()">Click Here for Contact Info</button>
+  <div id="contact" class="hidden">
+    <h2>Contact Information</h2>
+    <p>Email: <a href="mailto:jangamarohith3@gmail.com" style="color: #00ffff;">jangamarohith3@gmail.com</a></p>
+    <p>Phone: +1 (469) 768-6659</p>
+  </div>
+
+</body>
+</html>
