@@ -1,172 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Janagama Rohith - Portfolio</title>
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('background.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Janagama Rohith - Portfolio</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('background.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+h1, h2 {
+  font-size: 2.5em;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+h1 { font-size: 4em; font-weight: bold; }
+#typing {
+  font-size: 1.5em;
+  margin: 20px auto;
+  max-width: 800px;
+  color: #333333;
+  min-height: 80px;
+}
+.button {
+  display: inline-block;
+  margin: 20px 10px;
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: white;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  position: relative;
+}
+.button:hover {
+  background: linear-gradient(135deg, #ff6ec4, #7873f5);
+  transform: scale(1.1);
+}
+.blinking-cursor {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  margin-left: 10px;
+  animation: blink 1s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.hidden { display: none; margin-top: 30px; }
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  max-width: 800px;
+}
+li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  text-align: left;
+  font-size: 1.1em;
+}
+li strong {
+  font-size: 1.2em;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+li span {
+  color: #333333;
+  display: block;
+  margin-top: 8px;
+}
+#contact p { color: #333333; font-size: 1.2em; }
+#contact a { color: #333333; text-decoration: none; }
+</style>
+<script>
+function toggleProjects() {
+  var projects = document.getElementById('projects');
+  projects.style.display = projects.style.display === 'block' ? 'none' : 'block';
+}
+function toggleContact() {
+  var contact = document.getElementById('contact');
+  contact.style.display = contact.style.display === 'block' ? 'none' : 'block';
+}
+function typeEffect(element, text, speed) {
+  let i = 0;
+  function typing() {
+    if (i < text.length) {
+      element.innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, speed);
     }
-    h1, h2 {
-      font-size: 2.5em;
-      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: 4em;
-      font-weight: bold;
-    }
-    #typing {
-      font-size: 1.5em;
-      margin: 20px auto;
-      max-width: 800px;
-      color: #333333;
-      min-height: 80px;
-    }
-    .button {
-      display: inline-block;
-      margin: 20px 10px;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      color: white;
-      background: linear-gradient(135deg, #00c6ff, #0072ff);
-      border: none;
-      border-radius: 50px;
-      text-decoration: none;
-      cursor: pointer;
-      transition: background 0.3s, transform 0.3s;
-    }
-    .button:hover {
-      background: linear-gradient(135deg, #ff6ec4, #7873f5);
-      transform: scale(1.1);
-    }
-    .icon-blink {
-      width: 25px;
-      height: 25px;
-      vertical-align: middle;
-      margin-left: 10px;
-      animation: blink 1s infinite;
-    }
-    @keyframes blink {
-      0% { opacity: 1; }
-      50% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-    .hidden {
-      display: none;
-      margin-top: 30px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 20px auto;
-      max-width: 800px;
-    }
-    li {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 10px;
-      text-align: left;
-      font-size: 1.1em;
-    }
-    li strong {
-      font-size: 1.2em;
-      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    li span {
-      color: #333333;
-      display: block;
-      margin-top: 8px;
-    }
-    #contact p {
-      color: #333333;
-      font-size: 1.2em;
-    }
-    #contact a {
-      color: #333333;
-      text-decoration: none;
-    }
-  </style>
-  <script>
-    function toggleProjects() {
-      var projects = document.getElementById('projects');
-      projects.style.display = projects.style.display === 'block' ? 'none' : 'block';
-    }
-    function toggleContact() {
-      var contact = document.getElementById('contact');
-      contact.style.display = contact.style.display === 'block' ? 'none' : 'block';
-    }
-    function typeEffect(element, text, speed) {
-      let i = 0;
-      function typing() {
-        if (i < text.length) {
-          element.innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typing, speed);
-        }
-      }
-      typing();
-    }
-    window.onload = function() {
-      var typingText = "Experienced Data Scientist with 4+ years of expertise in machine learning, AI model development, and deployment. Skilled in predictive modeling, real-time solutions, and cloud technologies like AWS, GCP, and Azure. Passionate about solving business problems through data-driven insights and automation.";
-      var typingDiv = document.getElementById('typing');
-      typeEffect(typingDiv, typingText, 50);
-    }
-  </script>
+  }
+  typing();
+}
+window.onload = function() {
+  var typingText = "Experienced Data Scientist with 4+ years of expertise in machine learning, AI model development, and deployment. Skilled in predictive modeling, real-time solutions, and cloud technologies like AWS, GCP, and Azure. Passionate about solving business problems through data-driven insights and automation.";
+  var typingDiv = document.getElementById('typing');
+  typeEffect(typingDiv, typingText, 50);
+}
+</script>
 </head>
 <body>
-
-  <h1>Janagama Rohith</h1>
-
-  <h2>Data Scientist</h2>
-
-  <h2>About Me</h2>
-
-  <div id="typing"></div>
-
-  <button class="button" onclick="toggleProjects()">
-    Click Here to See My Projects
-    <img src="projects-icon.png" alt="Projects Icon" class="icon-blink">
-  </button>
-
-  <div id="projects" class="hidden">
-    <h2>Projects</h2>
-    <ul>
-      <li>
-        <strong>Personalized LLM Using RAG</strong>
-        <span>Built a Retrieval-Augmented Generation (RAG) based LLM system to deliver personalized responses using custom datasets.</span>
-      </li>
-      <li>
-        <strong>GenAI Healthcare Chatbot</strong>
-        <span>Developed a healthcare chatbot using GenAI to assist users with clinical and healthcare queries powered by Vertex AI and AWS Lambda.</span>
-      </li>
-    </ul>
-  </div>
-
-  <button class="button" onclick="toggleContact()">
-    Click Here for Contact Info
-    <img src="contact-icon.png" alt="Contact Icon" class="icon-blink">
-  </button>
-
-  <div id="contact" class="hidden">
-    <h2>Contact Information</h2>
-    <p>Email: <a href="mailto:jangamarohith3@gmail.com">jangamarohith3@gmail.com</a></p>
-    <p>Phone: +1 (469) 768-6659</p>
-  </div>
-
+<h1>Janagama Rohith</h1>
+<h2>Data Scientist</h2>
+<h2>About Me</h2>
+<div id="typing"></div>
+<button class="button" onclick="toggleProjects()">
+  Click Here to See My Projects
+  <img src="cursor.png" alt="Blinking Cursor" class="blinking-cursor">
+</button>
+<div id="projects" class="hidden">
+  <h2>Projects</h2>
+  <ul>
+    <li>
+      <strong>Personalized LLM Using RAG</strong>
+      <span>Built a Retrieval-Augmented Generation (RAG) based LLM system to deliver personalized responses using custom datasets.</span>
+    </li>
+    <li>
+      <strong>GenAI Healthcare Chatbot</strong>
+      <span>Developed a healthcare chatbot using GenAI to assist users with clinical and healthcare queries powered by Vertex AI and AWS Lambda.</span>
+    </li>
+  </ul>
+</div>
+<button class="button" onclick="toggleContact()">
+  Click Here for Contact Info
+  <img src="cursor.png" alt="Blinking Cursor" class="blinking-cursor">
+</button>
+<div id="contact" class="hidden">
+  <h2>Contact Information</h2>
+  <p>Email: <a href="mailto:jangamarohith3@gmail.com">jangamarohith3@gmail.com</a></p>
+  <p>Phone: +1 (469) 768-6659</p>
+</div>
 </body>
 </html>
