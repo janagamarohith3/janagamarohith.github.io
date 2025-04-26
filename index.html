@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,23 +11,23 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: url('background.jpeg') no-repeat center center fixed;
+  background: url('background.jpg') no-repeat center center fixed;
   background-size: cover;
   color: white;
   text-align: center;
   padding: 50px 20px;
 }
-
 /* HEADINGS IN NAVY BLUE */
-h1, h2, h3, h4, h5, h6, #projects h2, #projects li strong {
+h1, h2, h3, h4, h5, h6 {
   color: navy;
 }
-
+#projects h2, #projects strong {
+  color: navy;
+}
 h1 { 
   font-size: 4em; 
   font-weight: bold; 
 }
-
 #typing {
   font-size: 1.5em;
   margin: 20px auto;
@@ -34,7 +35,6 @@ h1 {
   color: #333333;
   min-height: 80px;
 }
-
 .button {
   display: inline-block;
   margin: 20px 10px;
@@ -49,12 +49,10 @@ h1 {
   transition: background 0.3s, transform 0.3s;
   position: relative;
 }
-
 .button:hover {
   background: linear-gradient(135deg, #ff6ec4, #7873f5);
   transform: scale(1.1);
 }
-
 .blinking-cursor {
   width: 25px;
   height: 25px;
@@ -62,24 +60,20 @@ h1 {
   margin-left: 10px;
   animation: blink 1s infinite;
 }
-
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
-
 .hidden { 
   display: none; 
   margin-top: 30px; 
 }
-
 ul {
   list-style: none;
   padding: 0;
   margin: 20px auto;
   max-width: 800px;
 }
-
 li {
   background: rgba(255, 255, 255, 0.05);
   padding: 15px;
@@ -88,22 +82,18 @@ li {
   text-align: left;
   font-size: 1.1em;
 }
-
 li strong {
   font-size: 1.2em;
 }
-
 li span {
   color: #333333;
   display: block;
   margin-top: 8px;
 }
-
 #contact p { 
   color: #333333; 
   font-size: 1.2em; 
 }
-
 #contact a { 
   color: #333333; 
   text-decoration: none; 
@@ -150,7 +140,6 @@ window.onload = function() {
 
 <button class="button" onclick="toggleProjects()">
   Click Here to See My Projects
-  <img src="cursor.png" alt="Blinking Cursor" class="blinking-cursor">
 </button>
 
 <div id="projects" class="hidden">
@@ -169,7 +158,6 @@ window.onload = function() {
 
 <button class="button" onclick="toggleContact()">
   Click Here for Contact Info
-  <img src="cursor.png" alt="Blinking Cursor" class="blinking-cursor">
 </button>
 
 <div id="contact" class="hidden">
